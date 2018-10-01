@@ -78,8 +78,8 @@ def callback(locationS,l):
     print("working still")
     result = pytesseract.image_to_string(Image.open(locationS), lang=l)
 
-    with io.open('locationF', mode='w',encoding="utf-8") as file:
-        file.write(res)
+    with io.open(locationF, mode='w',encoding="utf-8") as file:
+        file.write(result)
         print('See the magic file dude!')
 
     print(result)
